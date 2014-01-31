@@ -6,10 +6,6 @@ class CreateTweets {
   String iFeel = "I feel ... ";
   String userName = "unknown";
   //oAuth access codes for I am Not Alone (Emotweetion II)
-  String consumerKey = "yOoeyBH6hSn1M8JItZGew";
-  String consumerSecret = "j5XgQpGezivQs7njcCK0qRNl7jHCiC2FOsLNCY46I";
-  String accessToken = "223807372-MHaShE1rIL1oQga0aYwbFmDzOADBRKEuqUuJfRvJ";
-  String accessTokenSecret = "2phamiFXHpSqteYfG1kW4a53qotlwgHK5kbE0WfOcTc";
   
   Twitter twitter;
 
