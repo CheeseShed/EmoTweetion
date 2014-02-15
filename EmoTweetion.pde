@@ -1,8 +1,10 @@
-import netscape.javascript.*;
-
+//import netscape.javascript.*;
 import com.twitter.processing.*;
 import java.util.ArrayList;
-import twitter4j.TwitterFactory.*;
+import twitter4j.conf.*;
+import twitter4j.*;
+import twitter4j.auth.*;
+import twitter4j.api.*;
 import controlP5.*;
 
 int tweets=0;

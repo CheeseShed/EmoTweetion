@@ -1,7 +1,6 @@
+import controlP5.*;
+
 class Panel {
-
-  import controlP5.*;
-
   ControlP5 controlP5;
 
   String tweetInputText;

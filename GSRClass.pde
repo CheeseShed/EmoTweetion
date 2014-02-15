@@ -1,5 +1,6 @@
+import processing.serial.*;
+
 class GSR {
-  import processing.serial.*;
   Serial myPort;  
 
   int hPosition = 1;     // the horizontal position on the graph

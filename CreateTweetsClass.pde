@@ -1,6 +1,9 @@
-class CreateTweets {
+import twitter4j.conf.*;
+import twitter4j.*;
+import twitter4j.auth.*;
+import twitter4j.api.*;
 
-  import twitter4j.TwitterFactory.*;
+class CreateTweets {
 
   String msg = "";
   String iFeel = "I feel ... ";
@@ -16,8 +19,18 @@ class CreateTweets {
 
   void authorise() {
 
-    twitter = new TwitterFactory().getOAuthAuthorizedInstance (consumerKey, consumerSecret,
-    new AccessToken(accessToken, accessTokenSecret) ); 
+    ConfigurationBuilder cb = new ConfigurationBuilder();
+    cb.setOAuthConsumerKey(consumerKey);
+    cb.setOAuthConsumerSecret(consumerSecret);
+    cb.setOAuthAccessToken(accessToken);
+    cb.setOAuthAccessTokenSecret(accessTokenSecret);
+
+    TwitterFactory tf = new TwitterFactory(cb.build());
+
+    twitter = tf.getInstance();
+    
+    //twitter = new TwitterFactory().getOAuthAuthorizedInstance (consumerKey, consumerSecret, new AccessToken(accessToken, accessTokenSecret) );
+   
   }
 
   void post2Twitter(String msg, String name) {

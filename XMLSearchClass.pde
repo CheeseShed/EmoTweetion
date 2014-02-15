@@ -1,3 +1,5 @@
+import processing.xml.*;
+
 class XMLSearch {
 
   XMLElement node; //full XML data
@@ -25,14 +27,14 @@ class XMLSearch {
 
   void initXML() {
 
-    node = new XMLElement(pApplet, "emotweetionWords.xml"); //load XML
-    numEmotions = node.getChildCount(); //counts number of emotion categories
+    XMLElement node = new XMLElement(pApplet, "emotweetionWords.xml"); //load XMLM    numEmotions = node.getChildCount(); //counts number of emotion categories
     tempEmotionData = node.getChild(0); //gets first emotion category data
     numStrengths = tempEmotionData.getChildCount(); //takes number of strengths from first category of emotions
     allXMLWords = node.getChildren("emotion/strength/word");
     numTotalWords = allXMLWords.length;
     allWords = new ArrayList();
     allWordsInOneString = "";
+
   }
 
   void initEmotions() {
