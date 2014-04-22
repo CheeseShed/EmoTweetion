@@ -1,8 +1,8 @@
 import processing.xml.*;
 
 class XMLSearch {
-
-  XMLElement node; //full XML data
+  PApplet pApplet;
+  XMLElement node; // full XML data
   XMLElement emotionData; //Data for each emotion in XML
   XMLElement tempEmotionData; // store inital data to count strength number
   XMLElement emotionStrengths; //Data for each strength of each emotion in XML
@@ -15,19 +15,19 @@ class XMLSearch {
   String searchText;
   int [] emotionCountCategoryTotal;
   int strengthIndex, emotionCategoryIndex;
-  
-  PApplet pApplet;
 
   XMLSearch(PApplet pa) {
 
     pApplet = pa;
     initXML();
     initEmotions();
+
   }
 
   void initXML() {
 
-    XMLElement node = new XMLElement(pApplet, "emotweetionWords.xml"); //load XMLM    numEmotions = node.getChildCount(); //counts number of emotion categories
+    node = new XMLElement(pApplet, "emotweetionWords.xml"); //load XML
+    numEmotions = node.getChildCount(); //counts number of emotion categories
     tempEmotionData = node.getChild(0); //gets first emotion category data
     numStrengths = tempEmotionData.getChildCount(); //takes number of strengths from first category of emotions
     allXMLWords = node.getChildren("emotion/strength/word");
@@ -47,6 +47,7 @@ class XMLSearch {
         emotionCount[i][j]=0;
       }
     }
+
   }
 
   void search(String tweetText) {
@@ -83,11 +84,13 @@ class XMLSearch {
         }
       }
     }
+
   }
 
   int[][] getEmotionCount() {
 
     return emotionCount;
+
   }
   
   int getEmotionCategoryIndex(){
