@@ -1,0 +1,50 @@
+{
+    "emotions": {
+        "joy": {
+            "intense": [
+                "ecstatic",
+                "ecstasy",
+                "delight",
+                "delighted",
+                "bliss",
+                "blissful",
+                "blissfully",
+                "elation",
+                "elated",
+                "euphoric",
+                "euphoria",
+                "exaltation",
+                "fervour"
+            ],
+            "basic": [
+                "joy",
+                "joyful",
+                "ecstatic",
+                "happy",
+                "happiness",
+                "glad",
+                "gladness",
+                "enjoyed",
+                "enjoyment",
+                "jolly",
+                "jollity"                
+            ],
+            "low": [
+                "serenity",
+                "serene",
+                "peace",
+                "peaceful",
+                "peacefulness",
+                "calm",
+                "calmness",
+                "patient",
+                "patience",
+                "placid",
+                "tranquil",
+                "tranquillity",
+                "stillness",
+                "quietness"
+            ]
+        }
+    }
+}
